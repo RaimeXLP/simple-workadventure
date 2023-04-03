@@ -7,8 +7,16 @@ import { ActionBarActionButtonDescriptor } from "@workadventure/iframe-api-typin
 class WAsimple {
     buttons: {
         close: ButtonDescriptor,
+        closeDE: ButtonDescriptor,
     } = {
         close: {
+            label: "close",
+            className: "primary",
+            callback: (popup) => {
+                popup.close();
+            }
+        },
+        closeDE: {
             label: "Schließen",
             className: "primary",
             callback: (popup) => {
