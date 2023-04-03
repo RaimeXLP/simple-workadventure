@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "echo \"Releasing v$V\" && git push && npm version $V && git add . && git commit -m \"pre $V\" && git push && gh release create $V --generate-notes"
+    "release": "echo \"Releasing v$V\" && npm version $V && gh release create $V --generate-notes"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "dependencies": {
     "@workadventure/iframe-api-typings": "^1.15.6",
     "@workadventure/scripting-api-extra": "^1.4.6"
+  },
+  "devDependencies": {
+    "pre-push": "^0.1.4"
   }
 }
