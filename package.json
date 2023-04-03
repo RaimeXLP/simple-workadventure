@@ -1,6 +1,6 @@
 {
   "name": "simple-workadventure",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simplified Workadventure API with extra Functions",
   "main": "index.ts",
   "scripts": {
