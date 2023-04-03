@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "echo \"Releasing v$V\" && git add . && git commit -m \"pre $V\" && git push && npm version $V && git add . && git commit -m \"pre $V\" && git push && gh release create $V --generate-notes"
+    "release": "echo \"Releasing v$V\" && git push && npm version $V && git add . && git commit -m \"pre $V\" && git push && gh release create $V --generate-notes"
   },
   "repository": {
     "type": "git",
