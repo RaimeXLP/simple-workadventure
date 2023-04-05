@@ -40,11 +40,9 @@ a simple popUp close Button:
 WAs.buttons.close
 ```
 
-a simple popUp close Button with german labeling:
+### button creators
 
-```
-WAs.buttons.closeDE
-```
+
 
 
 ## functions 
@@ -59,7 +57,9 @@ WAs.popUp("display","text",[])
 - __text__ is the text you want to be shown
 - __[]__ should be filled with ButtonDescriptors can be left empty (you can also fill it with ```WAs.buttons.close``` to add a close button)
 
-### popUpOnArea
+## depricated
+
+### popUpOnArea (use popUp instead)
 
 ```
 WAs.popUpOnArea("area","display","text",[])
