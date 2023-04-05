@@ -7,22 +7,54 @@ import { ActionBarActionButtonDescriptor } from "@workadventure/iframe-api-typin
 class WAsimple {
     buttons: {
         close: ButtonDescriptor,
-        closeDE: ButtonDescriptor,
     } = {
         close: {
             label: "close",
-            className: "primary",
+            className: "error",
             callback: (popup) => {
                 popup.close();
             }
         },
-        closeDE: {
-            label: "Schließen",
-            className: "primary",
-            callback: (popup) => {
-                popup.close();
+    }
+
+    createCloseButton(label?:string): ButtonDescriptor{
+        if (label != undefined){
+            return {
+                label: label,
+                className: "error",
+                callback: (popup) => {
+                    popup.close();
+                }
             }
-        },
+        }else{
+            return {
+                label: "close",
+                className: "error",
+                callback: (popup) => {
+                    popup.close();
+                }
+            }
+        }
+    }
+
+    createLinkButton(url: string, label: string): ButtonDescriptor{
+        return {
+            label: label,
+            className: "primary",
+            callback: () => {
+                WA.nav.openTab(url);
+            }
+        }
+    }
+
+    createCoWebsiteButton(url: string, label: string): ButtonDescriptor{
+        return {
+            label: label,
+            className: "primary",
+            callback: () => {
+                WA.nav.openCoWebSite(url);
+            }
+        }
     }
 
     constructor (){
